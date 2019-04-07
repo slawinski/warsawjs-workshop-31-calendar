@@ -72,7 +72,7 @@ app.post('/data', (req, res) => {
 app.get('/file', (req, res) => {
   fs.readFile('file.txt', 'utf-8', (err, data) => {
     if (err) {
-      return res.status(404).json({ error: 'Not found' });
+      return res.status(404).json({ error: 'not found' });
     }
     res.json({ data });
   });
@@ -84,7 +84,7 @@ app.get('/file2', (req, res) => {
       res.json({ data });
     })
     .catch((err) => {
-      res.status(404).json({ error: 'Not found' });
+      res.status(404).json({ error: 'not found' });
     });
 });
 
